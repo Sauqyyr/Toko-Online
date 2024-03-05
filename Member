@@ -1,0 +1,18 @@
+public class Member extends User {
+    private String membershipType;
+
+    public Member(String username, String email, String membershipType) {
+        super(username, email);
+        this.membershipType = membershipType;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Membership Type: " + membershipType);
+    }
+
+    public void purchase(double amount) {
+        System.out.println(username + " has purchased items worth $" + amount);
+    }
+}
